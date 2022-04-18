@@ -1,66 +1,94 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>homepage</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="homepage.css" />
     <script src="homepage.js" type="stylesheet"></script>
-</head>
-<body>
-   <section class="header">
-       <nav>
-           <div class="logo">
-           <div class="menu">
-               <div class="one"></div>
-               <div class="two"></div>
-               <div class="three"></div>
-           </div>
-            <label> <a href="homepage.html"><h1 id="logo">MeroHostel</h1></a></label>
-           </div>
-           <div class="navlinks">
-                    <ul>
-                        <li><a href="homepage.html"> Home</a></li>
-                        <li><a href="#">About Us</a> </li>
-                        <li><a href="#"> Contact Us</a></li>
-                    </ul>
-           </div>
-       </nav>
-                <div class="container">
-                     <form action="" class="search">
-                         <input type="text" placeholder="Search Hostel" name="q">
-                         <button type="submit"><img src="img/search.png" alt="search"> </button>
-                     </form>
-                </div>
-   </section>
-   <div class="slider">
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="img/1.png" style="width:100%">
-        <div class="text">Caption Text</div>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <div class="brandLogo">
+        <h3>MeroHostel</h3>
       </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="img/2.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="img/3.jpg">
-        <div class="text">Caption Three</div>
-      </div>
-      
-      </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
+      <a href="#" class="toggleButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">LogIn</a></li>
+          <li><a href="#">SignIn</a></li>
+        </ul>
       </div>
     </div>
 
-</body>
+    <div class="body">
+      <!-- Background image slider of the body -->
+      <div class="background">
+        <img class="mySlide" src="img/11.png" alt="Background image" />
+        <img class="mySlide" src="img/22.jpg" alt="Background image" />
+        <img class="mySlide" src="img/33.jpg" alt="Background image" />
+      </div>
+
+      <!-- Search Bar -->
+      <div class="container">
+        <form action="" class="search">
+          <input type="text" placeholder="Search Hostel" name="q" />
+          <button type="submit">
+            <img src="img/search.png" alt="search" />
+          </button>
+        </form>
+      </div>
+
+      <!-- Containers column body-->
+      <div class="containers">
+        <div class="container1">
+          <h2>Add here</h2>
+        </div>
+        <div class="container2">
+          <h2>Add here</h2>
+        </div>
+        <div class="container3">
+          <h2>Add here</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="brandLogo">
+        <h3>MeroHostel</h3>
+
+        <div class="socialMedia">
+          <img src="soc-img/facebook-brands.svg" alt="" />
+          <img src="soc-img/instagram-brands.svg" alt="" />
+          <img src="soc-img/twitter-brands.svg" alt="" />
+          <img src="soc-img/whatsapp-brands.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="supportUs">
+        <h3>Support Us</h3>
+
+        <p>Contact Us</p>
+        <p>FAQ</p>
+        <p>9800000000</p>
+      </div>
+
+      <div class="aboutUs">
+        <h3>About Us</h3>
+
+        <p>Privacy policy</p>
+      </div>
+      
+    </div>
+
+    <script src="homepage.js"></script>
+  </body>
 </html>

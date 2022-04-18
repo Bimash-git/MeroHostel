@@ -1,61 +1,142 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.91),rgba(0, 0, 0, 0.91)),url(img/hostel.jpg) ;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+
+body {
+    margin: 0;
+    padding: 0;
 }
-nav{
+
+.brandLogo h3{
+    margin: 15px;
+    font-size: 35px;
+}
+
+.navbar {
     display: flex;
-    padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: wheat;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
-/*nav #logo{
-    width: 100px;
-    color: Red;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: larger;
-    font-weight: lighter;
-}*/
-.navlinks{
-    flex: 1;
-    text-align: right;
+.links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-.navlinks ul li{
+
+.links li {
     list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-
+    font-size: 22px;
 }
-.navlinks ul li a{
+
+.links ul li a {
     text-decoration: none;
-    font-family: sans-serif;
+    color: white;
+    padding: 14px;
+    display: block;    
 }
 
+.links ul li a:hover {
+    background-color: #555;
+}
+
+.toggleButton {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+    .toggleButton {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .links li {
+        text-align: center;
+    }
+
+    .links li a {
+        padding: .5rem 1rem;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .containers {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .background img.mySlide {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        width: 70%;
+        height: auto;
+    }
+}
+/* Background image slider*/
+.background .myslide{
+    width: 100%;
+    height: 100%;
+}
+
+/* Search Bar */
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    position: relative;
+    top: -400px;
 }
+
 .search{
     width: 100%;
     max-width: 700px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(12, 12, 11, 0.2);
     display: flex;
     align-items: center;
     border-radius: 40px;
     padding: 10px 10px;
 }
+
 .search input{
     background: transparent;
     flex: 1;
@@ -65,40 +146,68 @@ nav{
     font-size: 20px;
     color: white;
 }
+
 .search button img{
     width: 25px;
-
 }
+
 .search button{
     border: 0;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    background: #58629b;
+    background: #333;
     cursor: pointer;
 }
-.menu div{
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    border-radius: 25px;
-    text-align: right;
-}
-.menu{
-    width: 30px;
-    display: block;
-    margin:1em 0 0 1em;
-}
-.one{
-    width: 30px;
-}
-.two{
-    width: 20px;
-}
-.three{
-    width: 25px;
-}
-::placeholder{
-    color: white;
 
+/* Containers column body*/
+
+.container1, .container2, .container3 {
+    margin: 40 20px;
+    font-size: 40px;
+    color: beige;
+    height: 300px;
+    width: 400px;
+    background-color: #555;
+}
+.containers {
+    margin-left: 60px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    column-gap: 45px;
+    margin-bottom: 40px;
+}
+
+/* footer */
+.footer {
+    height: 350px;
+    width: 100%;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+.footer .brandLogo h3 {
+    color: wheat;
+    
+}
+.footer .socialMedia {
+    width: 40px;
+    height: 34px;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 25px;
+    justify-content: space-between;
+}
+
+.footer .supportUs {
+    color: burlywood;
+    font-size: 24px;
+}
+
+.footer .aboutUs {
+    color: burlywood;
+    font-size: 24px;
 }
